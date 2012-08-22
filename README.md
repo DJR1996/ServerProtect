@@ -1,5 +1,7 @@
 If you experience any issues, please post them at the link below and either me or Blitzace23 will respond ASAP. No tickets will be ignored under any circumstances. 
-<br/> <br/>
+<br/>
+Linky: http://dev.bukkit.org/server-mods/serverprotect/create-ticket/
+<br/>
 <h1>OpConfirm</h1>
 This is to combot force op tools (Such as NoCheatPlusPlus, NOT to be confused with NoCheatPlus, which is a legitimate plugin)<br/>
 If a user is not listed in ops in the config, they will be de-opped as soon as they move, type a command, break a block, or place a block. <br/>
