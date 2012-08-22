@@ -1,4 +1,4 @@
-Quick Links:<br/>
+<a name="top">Quick Links:<br/></a>
 <a href="#OpConfirm">OpConfirm</a><br/>
 <a href="#cmd">Command Logging</a><br/>
 <a href="#item">Item Blacklisting</a><br/>
@@ -13,8 +13,10 @@ Linky: http://dev.bukkit.org/server-mods/serverprotect/create-ticket/
 <a name="OpConfirm"><h1>OpConfirm</h1></a>
 This is to combot force op tools (Such as NoCheatPlusPlus, NOT to be confused with NoCheatPlus, which is a legitimate plugin)<br/>
 If a user is not listed in ops in the config, they will be de-opped as soon as they move, type a command, break a block, or place a block. <br/>
+<a href="#top">Top</a><br/>
 <a name="cmd"><h1>Command Logging</h1></a>
 All commands performed by players will be logged to plugins/ServerProtect/commands.log
+<a href="#top">Top</a><br/>
 <br/>
 This is to make it less of a hassle to look through server.log to see if <x player> did <x command>
 <a name="item"><h1>Item Blacklisting</h1></a>
@@ -47,10 +49,12 @@ The item blacklist currently supports the following items: <br/>
 <li> Emerald Blocks </li>
 </ul>
 <br/>
+<a href="#top">Top</a><br/>
 <a name="anti"><h1>Anti-Lag Features</h1></a>
 Optionally disable all mob spawning<br/>
 Optionally disable all drops<br/>
 Only users with permissions can drop items<br/>
+<a href="#top">Top</a><br/>
 <a name="perms"><h1>Permissions</h1></a>
 <ul>
 <li> serverprotect.placebedrock - Allows placing of bedrock </li>
@@ -89,3 +93,5 @@ Only users with permissions can drop items<br/>
 <li> serverprotect.bows - Users can fire bows </li>
 <li> serverprotect.emeraldblock - Users can place emerald blocks </li>
 </ul>
+<br/>
+<a href="#top">Top</a><br/>
