@@ -1,4 +1,4 @@
-<a name="top"></a>Quick Links:<br/>
+<a name="top"></a><strong>Quick Links:</strong><br/>
 <a href="#OpConfirm">OpConfirm</a><br/>
 <a href="#cmd">Command Logging</a><br/>
 <a href="#item">Item Blacklisting</a><br/>
