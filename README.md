@@ -18,7 +18,7 @@ If a user is not listed in ops in the config, they will be de-opped as soon as t
 All commands performed by players will be logged to plugins/ServerProtect/commands.log
 <a href="#top">Top</a><br/>
 <br/>
-This is to make it less of a hassle to look through server.log to see if <x player> did <x command>
+This is to make it less of a hassle to look through server.log to see if <x player> did <x command><br/>
 <a name="item"><h1>Item Blacklisting</h1></a>
 The item blacklist currently supports the following items: <br/>
 <ul>
