@@ -4,8 +4,8 @@
 <a href="#item">Item Blacklisting</a><br/>
 <a href="#anti">Anti-Lag Features</a><br/>
 <a href="#perms">Permissions</a><br/>
-
-
+<a href="http://dev.bukkit.org/server-mods/serverprotect">BukkitDev Page</a><br/>
+<a href="http://dev.bukkit.org/server-mods/serverprotect/create-ticket">Submit a ticket</a><br/>
 If you experience any issues, please post them at the link below and either me or Blitzace23 will respond ASAP. No tickets will be ignored under any circumstances. 
 <br/>
 Linky: http://dev.bukkit.org/server-mods/serverprotect/create-ticket/
