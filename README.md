@@ -1,6 +1,7 @@
 <a name="top"></a>
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thecotlsdragon98%40gmail%2ecom&lc=US&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="http://i1082.photobucket.com/albums/j366/Theway2cool1/DonateButton.png"></img></a><br/>
-If you don't feel like waiting for approval on BukkitDev, there is an alternate link <a href="https://github.com/downloads/Theway2cool1/ServerProtect/ServerProtect.jar">here</a> (v2.0).
+<a href="https://github.com/downloads/Theway2cool1/ServerProtect/ServerProtect-2_0_1.jar">Latest Dev Build (2.0.1)</a>
+<a href="https://github.com/downloads/Theway2cool1/ServerProtect/ServerProtect.jar>Latest Release (2.0)</a>
 
 <strong>Quick Links:</strong><br/>
 <a href="#OpConfirm">OpConfirm</a><br/>
