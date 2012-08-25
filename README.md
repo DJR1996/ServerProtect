@@ -103,6 +103,7 @@ Only users with permissions can drop items<br/>
 <li> serverprotect.pistons - Users can place pistons/sticky pistons </li>
 <li> serverprotect.webs - Users can place webs </li>
 <li> serverprotect.tripwire - Users can place trip wires/trip wire hooks </li>
+<li> serverprotect.alts.notify - Users will be notified if a user is suspected to have multiple accounts </li>
 
 </ul>
 <br/>
