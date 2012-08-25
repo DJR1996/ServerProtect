@@ -1,11 +1,11 @@
 package com.gmail.thecotlsdragon98.ServerProtect;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashSet;
+import java.util.Scanner;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
@@ -32,33 +32,34 @@ public class IPAuth implements Listener
 			}
 		}
 	}
-	BufferedReader reader;
+	Scanner input;
+	String name;
 	String IP;
-	HashSet<String> users = new HashSet<String>();
+	String[] nameandIP;
 	@EventHandler
 	public void checkIP(PlayerLoginEvent event)
 	{
-		try {
-			reader = new BufferedReader(new FileReader(authFile));
-		} catch (FileNotFoundException e) {
+		try{
+			input = new Scanner(new FileReader(authFile));
+		}
+		catch(FileNotFoundException e)
+		{
 			e.printStackTrace();
 		}
-		try {
-			while(reader.readLine() != null)
-			{
-				users.add(reader.readLine());
-				if(users.contains(event.getPlayer().getName()))
-				{
-					String[] nameandIP = reader.readLine().split(": ");
-					if(!event.getAddress().getHostAddress().equals(nameandIP[1]));
-					{
-						event.setKickMessage("Your IP is invalid for the username you've logged in with.");
-						event.setResult(Result.KICK_OTHER);
-					}
-				}
+		while(input.hasNextLine()){
+			nameandIP = input.nextLine().split(": ");
+			name = nameandIP[0];
+			IP = nameandIP[1];
+		}
+		input.close();
+		if(event.getPlayer().getName().equalsIgnoreCase(name) && !event.getAddress().getHostAddress().equalsIgnoreCase(IP)){
+			if(IP.equalsIgnoreCase("localhost") && event.getAddress().getHostAddress().equalsIgnoreCase("127.0.0.1")){
+				event.setResult(Result.ALLOWED);
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
+			else{
+				event.setKickMessage("Invalid IP for username: " + event.getPlayer().getName() + ". You have been disconnected.");
+				event.setResult(Result.KICK_OTHER);
+			}
 		}
 	}
 }

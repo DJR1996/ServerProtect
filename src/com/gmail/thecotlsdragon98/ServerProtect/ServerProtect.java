@@ -39,13 +39,17 @@ public class ServerProtect extends JavaPlugin
 			manager.registerEvents(new SpawnEggListener(this), this);
 			manager.registerEvents(new VehicleListener(this), this);
 			manager.registerEvents(new BowAndArrowListener(this), this);
+			manager.registerEvents(new RailListener(this), this);
+			manager.registerEvents(new PistonListener(this), this);
+			manager.registerEvents(new WebListener(this), this);
+			manager.registerEvents(new TripWireListener(this), this);
 		}
-		manager.registerEvents(new IPAuth(this), this);
 		manager.registerEvents(new ItemDropListener(this), this);
 		manager.registerEvents(new OpConfirm(this), this);
 		manager.registerEvents(new DevJoin(this), this);
 		manager.registerEvents(new MobSpawnListener(this), this);
 		manager.registerEvents(new CommandLogger(this), this);
+		manager.registerEvents(new IPAuth(this), this);
 		String[] operators = {"InsertOpNameHere"};
 		FileConfiguration config = this.getConfig();
 		config.options().header("Default ServerProtect Config.\nInstructions:\nprevent/mob-spawning: If set to true, no mobs will spawn in your server.\nprevent/natural-item-drops: Prevents items from dropping for any reason other than a player dropping them.\n" +
@@ -101,6 +105,10 @@ public class ServerProtect extends JavaPlugin
 		config.addDefault("messages.blacklist.spawnereggs", "&cYou aren't allowed to use spawner eggs!");
 		config.addDefault("messages.blacklist.minecarts", "&cYou aren't allowed to place minecarts!");
 		config.addDefault("messages.blacklist.boats", "&cYou aren't allowed to place boats!");
+		config.addDefault("messages.blacklist.rails", "&cYou aren't allowed to place rails!");
+		config.addDefault("messages.blacklist.webs", "&cYou aren't allowed to place webs!");
+		config.addDefault("messages.blacklist.pistons", "&cYou aren't allowed to place pistons!");
+		config.addDefault("messages.blacklist.tripwire", "&c You aren't allowed to use tripwires!");
 		config.addDefault("logging.commands.enabled", true);
 		config.options().copyDefaults(true);
 		saveConfig();
