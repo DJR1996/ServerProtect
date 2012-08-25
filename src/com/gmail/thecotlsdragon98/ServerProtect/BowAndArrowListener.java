@@ -1,3 +1,5 @@
+//This is not the original code to this class, it's one of the things I tried to do to fix it
+
 package com.gmail.thecotlsdragon98.ServerProtect;
 
 import org.bukkit.entity.EntityType;
