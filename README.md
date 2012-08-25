@@ -4,6 +4,7 @@
 <a href="#item">Item Blacklisting</a><br/>
 <a href="#anti">Anti-Lag Features</a><br/>
 <a href="#perms">Permissions</a><br/>
+<a href="#uip">User-IP Authentication</a><br/>
 <a href="http://dev.bukkit.org/server-mods/serverprotect">BukkitDev Page</a><br/>
 <a href="http://dev.bukkit.org/server-mods/serverprotect/create-ticket">Submit a ticket</a><br/>
 If you experience any issues, please post them at the link below and either me or Blitzace23 will respond ASAP. No tickets will be ignored under any circumstances. 
@@ -92,6 +93,14 @@ Only users with permissions can drop items<br/>
 <li> serverprotect.spawneggs - Users can use spawner eggs </li>
 <li> serverprotect.bows - Users can fire bows </li>
 <li> serverprotect.emeraldblock - Users can place emerald blocks </li>
+<li> serverprotect.rails - Users can place rails </li>
+<li> serverprotect.pistons - Users can place pistons/sticky pistons </li>
+<li> serverprotect.webs - Users can place webs </li>
+<li> serverprotect.tripwire - Users can place trip wires/trip wire hooks </li>
+
 </ul>
 <br/>
+<a href="#top">Top</a><br/>
+<a name="uip"><h1>User-IP Authentication</h1></a>
+In ServerProtect/IPAuth.yml, you can assign IP addresses to users. For example, <strong><i>Theway2cool1: localhost</i></strong>. With that, if a user tries to login as Theway2cool1, it checks if their IP is <strong><i>localhost</i></strong>. If not, they are kicked.<br/>
 <a href="#top">Top</a><br/>
