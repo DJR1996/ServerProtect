@@ -14,6 +14,7 @@ class EggListener implements Listener
 	{
 		plugin = instance;
 	}
+	int eggsallowed = 0;
 	int kickcounter = 0;
 	int bancounter = 0;
 	@EventHandler()
@@ -23,12 +24,19 @@ class EggListener implements Listener
 		{
 			if(event.getMaterial() == Material.EGG && !event.getPlayer().hasPermission("serverprotect.eggs"))
 			{
-				if(event.getPlayer().hasPermission("serverprotect.eggs.autokick.exempt"))
+				if(eggsallowed <= plugin.getConfig().getInt("projectiles.eggs.allowed"));
+				{
+					eggsallowed++;
+				}
+				if(eggsallowed == plugin.getConfig().getInt("projectiles.eggs.allowed")){
+					event.getPlayer().sendMessage(ChatColor.GREEN + "You've reached the maximum amount of eggs you can throw for now.");
+				}
+				if(event.getPlayer().hasPermission("serverprotect.eggs.autokick.exempt") && eggsallowed > plugin.getConfig().getInt("projectiles.eggs.allowed"))
 				{
 				event.setCancelled(true);
 				event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.egg.not-allowed")).replaceAll("&([a-z0-9])", "\u00A7$1"));
 				}
-				else if(!event.getPlayer().hasPermission("serverprotect.eggs.autokick.exempt"))
+				else if(!event.getPlayer().hasPermission("serverprotect.eggs.autokick.exempt") && eggsallowed > plugin.getConfig().getInt("projectiles.eggs.allowed"))
 				{
 					kickcounter++;
 					event.setCancelled(true);

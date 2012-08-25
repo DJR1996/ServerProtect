@@ -14,6 +14,7 @@ class ExpBottleListener implements Listener
 	{
 		plugin = instance;
 	}
+	int allowed = 0;
 	int kickcounter = 0;
 	int bancounter = 0;
 	@EventHandler()
@@ -23,12 +24,19 @@ class ExpBottleListener implements Listener
 		{
 			if(event.getMaterial() == Material.EXP_BOTTLE && !event.getPlayer().hasPermission("serverprotect.exp"))
 			{
-				if(event.getPlayer().hasPermission("serverprotect.exp.autokick.exempt"))
+				if(allowed <= plugin.getConfig().getInt("projectiles.exp.allowed"));
+				{
+					allowed++;
+				}
+				if(allowed == plugin.getConfig().getInt("projectiles.exp.allowed")){
+					event.getPlayer().sendMessage(ChatColor.GREEN + "You've reached the maximum amount of EXP bottles you can throw for now.");
+				}
+				if(event.getPlayer().hasPermission("serverprotect.exp.autokick.exempt") && allowed > plugin.getConfig().getInt("projectiles.exp.allowed"))
 				{
 				event.setCancelled(true);
 				event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.exp.not-allowed")).replaceAll("&([a-z0-9])", "\u00A7$1"));
 				}
-				else if(!event.getPlayer().hasPermission("serverprotect.exp.autokick.exempt"))
+				else if(!event.getPlayer().hasPermission("serverprotect.exp.autokick.exempt") && allowed > plugin.getConfig().getInt("projectiles.exp.allowed"))
 				{
 					kickcounter++;
 					event.setCancelled(true);

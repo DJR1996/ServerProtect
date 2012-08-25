@@ -16,7 +16,7 @@ public class WebListener implements Listener
 	public void Web(BlockPlaceEvent event){
 		if(event.getBlockPlaced().getType() == Material.WEB && !event.getPlayer().hasPermission("serverprotect.webs")){
 			event.setCancelled(true);
-			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.webs").replaceAll("&([a-z0-9])", "/u00A7$1")));
+			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.webs").replaceAll("&([a-z0-9])", "\u00A7$1")));
 		}
 	}
 }

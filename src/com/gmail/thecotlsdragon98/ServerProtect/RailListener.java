@@ -16,15 +16,15 @@ public class RailListener implements Listener
 	public void Rails(BlockPlaceEvent event){
 		if(event.getBlockPlaced().getType() == Material.RAILS && !event.getPlayer().hasPermission("serverprotect.rails")){
 			event.setCancelled(true);
-			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.rails").replaceAll("&([a-z0-9])", "/u00A7$1")));
+			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.rails").replaceAll("&([a-z0-9])", "\u00A7$1")));
 		}
 		else if(event.getBlockPlaced().getType() == Material.POWERED_RAIL && !event.getPlayer().hasPermission("serverprotect.rails")){
 			event.setCancelled(true);
-			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.rails").replaceAll("&([a-z0-9])", "/u00A7$1")));
+			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.rails").replaceAll("&([a-z0-9])", "\u00A7$1")));
 		}
 		else if(event.getBlockPlaced().getType() == Material.DETECTOR_RAIL && !event.getPlayer().hasPermission("serverprotect.rails")){
 			event.setCancelled(true);
-			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.rails").replaceAll("&([a-z0-9])", "/u00A7$1")));
+			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.rails").replaceAll("&([a-z0-9])", "\u00A7$1")));
 		}
 	}
 }

@@ -16,11 +16,11 @@ public class PistonListener implements Listener
 	public void Piston(BlockPlaceEvent event){
 		if(event.getBlockPlaced().getType() == Material.PISTON_BASE && !event.getPlayer().hasPermission("serverprotect.pistons")){
 			event.setCancelled(true);
-			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.pistons").replaceAll("&([a-z0-9])", "/u00A7$1")));
+			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.pistons").replaceAll("&([a-z0-9])", "\u00A7$1")));
 		}
 		else if(event.getBlockPlaced().getType() == Material.PISTON_STICKY_BASE && !event.getPlayer().hasPermission("serverprotect.pistons")){
 			event.setCancelled(true);
-			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.pistons").replaceAll("&([a-z0-9])", "/u00A7$1")));
+			event.getPlayer().sendMessage(String.format(plugin.getConfig().getString("messages.blacklist.pistons").replaceAll("&([a-z0-9])", "\u00A7$1")));
 		}
 	}
 }

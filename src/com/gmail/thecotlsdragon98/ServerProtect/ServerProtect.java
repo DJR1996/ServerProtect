@@ -12,7 +12,7 @@ public class ServerProtect extends JavaPlugin
 	@Override
 	public void onEnable()
 	{
-		getLogger().info("ServerProtect v1.5 enabled");
+		getLogger().info("ServerProtect v2.1 enabled");
 		getConfig().addDefault("blacklist.enabled", true);
 		PluginManager manager = this.getServer().getPluginManager();
 		if(getConfig().getBoolean("blacklist.enabled"))
@@ -50,6 +50,7 @@ public class ServerProtect extends JavaPlugin
 		manager.registerEvents(new MobSpawnListener(this), this);
 		manager.registerEvents(new CommandLogger(this), this);
 		manager.registerEvents(new IPAuth(this), this);
+		manager.registerEvents(new AltAccounts(this), this);
 		String[] operators = {"InsertOpNameHere"};
 		FileConfiguration config = this.getConfig();
 		config.options().header("Default ServerProtect Config.\nInstructions:\nprevent/mob-spawning: If set to true, no mobs will spawn in your server.\nprevent/natural-item-drops: Prevents items from dropping for any reason other than a player dropping them.\n" +
@@ -57,7 +58,9 @@ public class ServerProtect extends JavaPlugin
 				"protection/OpConfrim/kick-bad-ops: If true, people who are op (but not on OpConfirm/ops) will be kicked and de-opped.\n" +
 				"protection/OpConfirm/ban-bad-ops: You know the rest.\n" +
 				"messages/blacklist/<item>: Sets the messages when a user tries to place/break/throw blacklisted items\n" +
-				"logging/commands/enabled: Should player commands be logged? Commands will be logged to plugins/ServerProtect/commands.log");
+				"logging/commands/enabled: Should player commands be logged? Commands will be logged to plugins/ServerProtect/commands.log\n" +
+				"alts/kick-on-login: If ServerProtect suspects a user is using an alternate account, should they be kicked?\n" +
+				"projectiles/<item>/allowed: How many items can a user throw before they are denied permission?\n");
 		config.options().copyHeader(true);
 		config.addDefault("prevent.mob-spawning", false);
 		config.addDefault("prevent.natural-item-drops", false);
@@ -110,6 +113,9 @@ public class ServerProtect extends JavaPlugin
 		config.addDefault("messages.blacklist.pistons", "&cYou aren't allowed to place pistons!");
 		config.addDefault("messages.blacklist.tripwire", "&c You aren't allowed to use tripwires!");
 		config.addDefault("logging.commands.enabled", true);
+		config.addDefault("alts.kick-on-login", false);
+		config.addDefault("projectiles.eggs.allowed", 0);
+		config.addDefault("projectiles.exp.allowed", 0);
 		config.options().copyDefaults(true);
 		saveConfig();
 	}
@@ -117,6 +123,6 @@ public class ServerProtect extends JavaPlugin
 	@Override
 	public void onDisable()
 	{
-		getLogger().info("ServerProtect v1.5 disabled");
+		getLogger().info("ServerProtect v2.1 disabled");
 	}
 }
