@@ -14,7 +14,7 @@
 If you experience any issues, please post them at the link above and either me or Blitzace23 will respond ASAP. No tickets will be ignored under any circumstances. 
 <br/>
 <a name="OpConfirm"><h1>OpConfirm</h1></a>
-This is to combot force op tools (Such as NoCheatPlusPlus, NOT to be confused with NoCheatPlus, which is a legitimate plugin)<br/>
+This is to combat force op tools (Such as NoCheatPlusPlus, NOT to be confused with NoCheatPlus, which is a legitimate plugin)<br/>
 If a user is not listed in ops in the config, they will be de-opped as soon as they move, type a command, break a block, or place a block. <br/>
 <a href="#top">Top</a><br/>
 <a name="cmd"><h1>Command Logging</h1></a>
