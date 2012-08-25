@@ -46,6 +46,10 @@ The item blacklist currently supports the following items:
 <li> Minecarts </li>
 <li> Boats </li>
 <li> Emerald Blocks </li>
+<li> Rails, Powered Rails, Detector Rails </li>
+<li> Pistons, Sticky Pistons </li>
+<li> Webs </li>
+<li> Tripwires, Tripwire Hooks </li>
 </ul>
 <br/>
 <a href="#top">Top</a><br/>
