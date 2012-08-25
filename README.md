@@ -7,7 +7,7 @@
 <a href="#uip">User-IP Authentication</a><br/>
 <a href="http://dev.bukkit.org/server-mods/serverprotect">BukkitDev Page</a><br/>
 <a href="http://dev.bukkit.org/server-mods/serverprotect/create-ticket">Submit a ticket</a><br/>
-If you experience any issues, please post them at the link below and either me or Blitzace23 will respond ASAP. No tickets will be ignored under any circumstances. 
+If you experience any issues, please post them at the link above and either me or Blitzace23 will respond ASAP. No tickets will be ignored under any circumstances. 
 <br/>
 <a name="OpConfirm"><h1>OpConfirm</h1></a>
 This is to combot force op tools (Such as NoCheatPlusPlus, NOT to be confused with NoCheatPlus, which is a legitimate plugin)<br/>
