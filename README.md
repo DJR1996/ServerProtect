@@ -110,3 +110,8 @@ Only users with permissions can drop items<br/>
 <a name="uip"><h1>User-IP Authentication</h1></a>
 In ServerProtect/IPAuth.yml, you can assign IP addresses to users. For example, <strong><i>Theway2cool1: localhost</i></strong>. With that, if a user tries to login as Theway2cool1, it checks if their IP is <strong><i>localhost</i></strong>. If not, they are kicked.<br/>
 <a href="#top">Top</a><br/>
+<h1>Alternate Account Checking</h1>
+When players login, their IP addresses are logged to users.yml. When a player logs in, it checks users.yml to see if their IP is already used. Then, 1 of 2 things will happen:<br/>
+<i>If you have <strong>alts.kick-on-login</strong> enabled:</i> If it finds that their IP address is taken, they will not be allowed to login.<br/>
+<i>If you have it disabled...:</i> Users who have the permission <strong>serverprotect.alts.notify</strong> will be notified that the user has an IP address that is taken, and will be told the user that already has that IP.<br/>
+For example. Theway2cool1 has the same IP address as Theway2cool2 (68.59.67.22)
