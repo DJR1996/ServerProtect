@@ -1,5 +1,3 @@
-// This is not in the plugin yet. I'm working on this.
-
 package com.gmail.thecotlsdragon98.ServerProtect;
 
 import java.io.File;
