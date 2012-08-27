@@ -116,3 +116,4 @@ When players login, their IP addresses are logged to users.yml. When a player lo
 <i>If you have <strong>alts.kick-on-login</strong> enabled:</i> If it finds that their IP address is taken, they will not be allowed to login.<br/>
 <i>If you have it disabled...:</i> Users who have the permission <strong>serverprotect.alts.notify</strong> will be notified that the user has an IP address that is taken, and will be told the user that already has that IP.<br/>
 For example. Theway2cool1 has the same IP address as Theway2cool2 (68.59.67.22)
+<a href="#top">Top</a>
