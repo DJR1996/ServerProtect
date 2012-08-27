@@ -115,5 +115,5 @@ In ServerProtect/IPAuth.yml, you can assign IP addresses to users. For example, 
 When players login, their IP addresses are logged to users.yml. When a player logs in, it checks users.yml to see if their IP is already used. Then, 1 of 2 things will happen:<br/>
 <i>If you have <strong>alts.kick-on-login</strong> enabled:</i> If it finds that their IP address is taken, they will not be allowed to login.<br/>
 <i>If you have it disabled...:</i> Users who have the permission <strong>serverprotect.alts.notify</strong> will be notified that the user has an IP address that is taken, and will be told the user that already has that IP.<br/>
-For example. Theway2cool1 has the same IP address as Theway2cool2 (68.59.67.22)
-<a href="#top">Top</a>
+For example. Theway2cool1 has the same IP address as Theway2cool2 (68.59.67.22)<br/>
+<a href="#top">Top</a><br/>
